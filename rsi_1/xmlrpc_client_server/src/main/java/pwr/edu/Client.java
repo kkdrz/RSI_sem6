@@ -14,6 +14,7 @@ public class Client implements AsyncCallback {
     private String serverName;
     private String clientName;
     private int clientPort;
+    private int number;
 
     XmlRpcClient client;
 
@@ -39,6 +40,22 @@ public class Client implements AsyncCallback {
     public String echo(String x) {
         System.out.println(x);
         return "Done.";
+    }
+
+    public String randomNumber(int min, int max) {
+        number = new Random().nextInt((max - min) + 1) + min;
+        System.out.println("Secret number is " + number);
+        return "I'm ready to start the game!";
+    }
+
+    public String guess(int x) {
+        if (x == number) {
+            return "Congrats, " + x + " was the secret number.";
+        }
+        if (x < number){
+            return "Secret number is bigger than " + x;
+        }
+        return "Secret number is smaller than " + x;
     }
 
     public String concatenate(String txt, int number) {
