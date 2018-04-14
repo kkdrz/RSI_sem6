@@ -34,6 +34,7 @@ public class WorkerImpl extends UnicastRemoteObject implements Worker {
 
     @Override
     public Object compute(Task task, Object params) {
+        System.out.println("Computing task: " + task);
         return task.compute(params);
     }
 

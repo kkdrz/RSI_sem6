@@ -1,12 +1,9 @@
 package client;
 
 import farmer.Farmer;
-import worker.Worker;
 import worker.WorkerImpl;
-
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.server.ExportException;
+
 
 public class Client {
 
@@ -22,7 +19,7 @@ public class Client {
         if ("worker".equals(args[0])) {
             new WorkerImpl(args[2], Integer.valueOf(args[1]));
         } else {
-            new Farmer(Integer.valueOf(args[1]));
+            new Farmer(Integer.valueOf(args[1]), Integer.valueOf(args[2]));
         }
     }
 }
