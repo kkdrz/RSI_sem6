@@ -5,13 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>edu.pwr</groupId>
-    <artifactId>java_rmi_II</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>client_farmer_worker</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>farmer</module>
-        <module>worker</module>
-    </modules>
 
 
 </project>
