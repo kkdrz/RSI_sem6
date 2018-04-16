@@ -2,6 +2,7 @@ package task;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Random;
 
 public class MergeSortTask implements Task, Serializable {
 
@@ -13,7 +14,10 @@ public class MergeSortTask implements Task, Serializable {
 
         List<Object> elements = input.getElements();
         elements.sort(null);
-        return new MergeSortResult<>(elements);
+
+        int rand = new Random(input.getRandom()).nextInt(100);
+        System.out.println("Losowa liczba: " + rand);
+        return new MergeSortResult<>(elements, rand);
     }
 
     @Override

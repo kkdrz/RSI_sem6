@@ -28,11 +28,27 @@ public class Farmer {
             List<MergeSortResult> workersResults = callWorkers(workersInputs);
             List<MyCustomObject> sorted = mergeResults(unpackResults(workersResults));
             sorted.forEach(System.out::println);
+            printNumbersFromWorkers(workersResults);
+            printAvgFromWorkers(workersResults);
+
 
         } catch (Exception e) {
             System.out.println("Problem with getting registry on port: " + port);
             e.printStackTrace();
         }
+    }
+
+    private void printAvgFromWorkers(List<MergeSortResult> workersResults) {
+        double avg = 0;
+        for (MergeSortResult workersResult : workersResults) {
+            avg += workersResult.getRandom();
+        }
+        System.out.println("\nAverage: " + avg/workersResults.size());
+    }
+
+    private void printNumbersFromWorkers(List<MergeSortResult> mergeSortResults) {
+        System.out.println("Numbers from workers: ");
+        mergeSortResults.forEach(msr -> System.out.print(msr.getRandom() + ", "));
     }
 
     private void printWorkers() {
@@ -72,7 +88,7 @@ public class Farmer {
         List<List<MyCustomObject>> mergedLists = new ArrayList<>();
 
         for (int i = 0; i < results.size(); i += 2) {
-            mergedLists.add(mergeLists(results.get(i), i+1 < results.size() ? results.get(i + 1) : null));
+            mergedLists.add(mergeLists(results.get(i), i + 1 < results.size() ? results.get(i + 1) : null));
         }
         return mergeResults(mergedLists);
     }
