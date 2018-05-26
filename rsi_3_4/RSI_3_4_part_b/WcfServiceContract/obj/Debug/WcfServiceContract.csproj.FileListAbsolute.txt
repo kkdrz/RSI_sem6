@@ -1,0 +1,5 @@
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\RSI_3_4_part_b\bin\Debug\RSI_3_4_part_b.dll.config
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\RSI_3_4_part_b\bin\Debug\RSI_3_4_part_b.dll
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\RSI_3_4_part_b\bin\Debug\RSI_3_4_part_b.pdb
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\RSI_3_4_part_b\obj\Debug\RSI_3_4_part_b.dll
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\RSI_3_4_part_b\obj\Debug\RSI_3_4_part_b.pdb

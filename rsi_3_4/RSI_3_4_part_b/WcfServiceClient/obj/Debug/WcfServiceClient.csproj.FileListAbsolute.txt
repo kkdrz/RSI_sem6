@@ -1,0 +1,5 @@
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceClient\bin\Debug\WcfServiceClient.exe.config
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceClient\bin\Debug\WcfServiceClient.exe
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceClient\bin\Debug\WcfServiceClient.pdb
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceClient\obj\Debug\WcfServiceClient.exe
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceClient\obj\Debug\WcfServiceClient.pdb
