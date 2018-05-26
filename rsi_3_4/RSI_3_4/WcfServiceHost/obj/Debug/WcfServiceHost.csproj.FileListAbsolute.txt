@@ -1,0 +1,8 @@
+C:\Projects\rsi\rsi_3_4\RSI_3_4\WcfServiceHost\bin\Debug\WcfServiceHost.exe.config
+C:\Projects\rsi\rsi_3_4\RSI_3_4\WcfServiceHost\bin\Debug\WcfServiceHost.exe
+C:\Projects\rsi\rsi_3_4\RSI_3_4\WcfServiceHost\bin\Debug\WcfServiceHost.pdb
+C:\Projects\rsi\rsi_3_4\RSI_3_4\WcfServiceHost\bin\Debug\RSI_3_4.dll
+C:\Projects\rsi\rsi_3_4\RSI_3_4\WcfServiceHost\bin\Debug\RSI_3_4.pdb
+C:\Projects\rsi\rsi_3_4\RSI_3_4\WcfServiceHost\obj\Debug\WcfServiceHost.csprojResolveAssemblyReference.cache
+C:\Projects\rsi\rsi_3_4\RSI_3_4\WcfServiceHost\obj\Debug\WcfServiceHost.exe
+C:\Projects\rsi\rsi_3_4\RSI_3_4\WcfServiceHost\obj\Debug\WcfServiceHost.pdb

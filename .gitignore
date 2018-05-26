@@ -2,3 +2,5 @@
 target/
 *.iml
 .mvn/
+*.sln
+.vs
