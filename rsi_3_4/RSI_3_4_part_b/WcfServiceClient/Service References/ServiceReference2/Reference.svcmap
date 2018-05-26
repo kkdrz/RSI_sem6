@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5f5f8b50-49c6-49ef-9b88-46f02fe99d9a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9099/CallbackCalculator/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="6a916359-a6dd-4762-9744-e1992ff4113b" SourceId="1" SourceUrl="http://localhost:9099/CallbackCalculator/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="11d9ad89-b5b8-471d-ae40-efe29614be60" SourceId="1" SourceUrl="http://localhost:9099/CallbackCalculator/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="13d5d168-77a0-4e5b-aa07-c462fe905145" SourceId="1" SourceUrl="http://localhost:9099/CallbackCalculator/mex" />
+    <MetadataFile FileName="CallbackContract.xsd" MetadataType="Schema" ID="9fbd0749-2cf0-4d47-baac-54cdad0716c6" SourceId="1" SourceUrl="http://localhost:9099/CallbackCalculator/mex" />
+    <MetadataFile FileName="Arrays.xsd" MetadataType="Schema" ID="52b79c9c-2ef9-419b-bc27-2a8183d7b483" SourceId="1" SourceUrl="http://localhost:9099/CallbackCalculator/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

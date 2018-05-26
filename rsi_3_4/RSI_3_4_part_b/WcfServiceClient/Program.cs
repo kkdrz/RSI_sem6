@@ -1,5 +1,7 @@
 ﻿using System;
+using System.ServiceModel;
 using WcfServiceClient.ServiceReference1;
+using WcfServiceClient.ServiceReference2;
 
 namespace WcfServiceClient
 {
@@ -7,20 +9,57 @@ namespace WcfServiceClient
     {
         private static void Main(string[] args)
         {
-            var client = new ComplexCalculatorClient();
+            //SYNC PART
+            var syncClient = new ComplexCalculatorClient();
 
             int[] inputArray = { 24, 43, 22, 33, 11, 3, 4, 53, 221 };
 
             Console.WriteLine("Input: {24, 43, 22, 33, 11, 3, 4, 53, 221}");
 
-            var spec = new RandomSpecification { IntNumbersArray = inputArray };
+            var spec = new ServiceReference1.RandomSpecification { IntNumbersArray = inputArray };
 
-            var result = client.Random(spec);
+            var result = syncClient.Random(spec);
+            Console.WriteLine("Sync Result: " + result.Result);
+            Console.WriteLine("Sync Time: " + result.Time);
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
 
-            Console.WriteLine("Result: " + result.Result);
-            Console.WriteLine("Time: " + result.Time);
-            Console.ReadLine();
 
+            //ASYNC CALLBACK
+            var handler = new CallbackHandler();
+            var context = new InstanceContext(handler);
+            var callbackClient = new CallbackCalculatorClient(context);
+
+            Console.WriteLine("Input: {24, 43, 22, 33, 11, 3, 4, 53, 221}");
+
+            var specification = new ServiceReference2.RandomSpecification { IntNumbersArray = inputArray };
+
+            callbackClient.AsyncRandom(specification);
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.WriteLine("SPAM");
+            Console.Read();
         }
+        
+    }
+
+    public class CallbackHandler : ICallbackCalculatorCallback
+    {
+        public void ReturnRandom(ServiceReference2.RandomResult result)
+        {
+            Console.WriteLine("Callback Result: " + result.Result);
+            Console.WriteLine("Callback Time: " + result.Time);
+            Console.ReadLine();
+        }
+
     }
 }

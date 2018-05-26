@@ -1,0 +1,5 @@
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\CallbackContract\bin\Debug\CallbackContract.dll.config
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\CallbackContract\bin\Debug\CallbackContract.dll
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\CallbackContract\bin\Debug\CallbackContract.pdb
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\CallbackContract\obj\Debug\CallbackContract.dll
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\CallbackContract\obj\Debug\CallbackContract.pdb
