@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
 
+@CrossOrigin()
 @RestController()
 @RequestMapping("/fruits")
 public class FruitController {
