@@ -123,6 +123,12 @@ namespace WcfServiceClient.ServiceReference2 {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference2.ICallbackCalculator", CallbackContract=typeof(WcfServiceClient.ServiceReference2.ICallbackCalculatorCallback), SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface ICallbackCalculator {
         
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICallbackCalculator/DateDiff")]
+        void DateDiff(System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICallbackCalculator/DateDiff")]
+        System.Threading.Tasks.Task DateDiffAsync(System.DateTime date);
+        
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICallbackCalculator/AsyncRandom")]
         void AsyncRandom(WcfServiceClient.ServiceReference2.RandomSpecification specification);
         
@@ -135,6 +141,9 @@ namespace WcfServiceClient.ServiceReference2 {
         
         [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICallbackCalculator/ReturnRandom")]
         void ReturnRandom(WcfServiceClient.ServiceReference2.RandomResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(IsOneWay=true, Action="http://tempuri.org/ICallbackCalculator/ReturnDateDiff")]
+        void ReturnDateDiff(double days);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -163,6 +172,14 @@ namespace WcfServiceClient.ServiceReference2 {
         
         public CallbackCalculatorClient(System.ServiceModel.InstanceContext callbackInstance, System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(callbackInstance, binding, remoteAddress) {
+        }
+        
+        public void DateDiff(System.DateTime date) {
+            base.Channel.DateDiff(date);
+        }
+        
+        public System.Threading.Tasks.Task DateDiffAsync(System.DateTime date) {
+            return base.Channel.DateDiffAsync(date);
         }
         
         public void AsyncRandom(WcfServiceClient.ServiceReference2.RandomSpecification specification) {

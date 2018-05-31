@@ -59,6 +59,10 @@
       <Project>{5f295502-6782-4f21-a3c7-0c0d04675dcf}</Project>
       <Name>WcfServiceContract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\StreamContract\StreamContract.csproj">
+      <Project>{89b42eb2-550a-4216-ae3d-830089682afe}</Project>
+      <Name>StreamContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -30,5 +30,12 @@ namespace CallbackContract
                 callback.ReturnRandom(new RandomResult { Time = duration, Result = specification.IntNumbersArray[randomIndex] });
             }
 
-        }
+            public void DateDiff(DateTime date)
+            {
+                DateTime current = DateTime.Today;
+                Console.WriteLine("Current date: " + current);
+                callback.ReturnDateDiff((current - date).TotalDays);
+            }
+
+    }
 }

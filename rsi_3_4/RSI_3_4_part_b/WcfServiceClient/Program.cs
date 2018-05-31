@@ -10,6 +10,7 @@ namespace WcfServiceClient
         private static void Main(string[] args)
         {
             //SYNC PART
+            /*
             var syncClient = new ComplexCalculatorClient();
 
             int[] inputArray = { 24, 43, 22, 33, 11, 3, 4, 53, 221 };
@@ -28,13 +29,25 @@ namespace WcfServiceClient
             Console.WriteLine("SPAM");
             Console.WriteLine("SPAM");
             Console.WriteLine("SPAM");
-
+            */
 
             //ASYNC CALLBACK
+            int[] inputArray = { 24, 43, 22, 33, 11, 3, 4, 53, 221 };
             var handler = new CallbackHandler();
             var context = new InstanceContext(handler);
             var callbackClient = new CallbackCalculatorClient(context);
+            /*
+            DateTime date = new DateTime(2018, 2, 28);
+            Console.WriteLine("First date: " + date);
+            callbackClient.DateDiffAsync(date);
+            Console.WriteLine("test");
+            Console.WriteLine("test");
+            Console.WriteLine("test");
+            Console.WriteLine("test");
+            Console.WriteLine("test");
+            Console.Read();
 
+            */
             Console.WriteLine("Input: {24, 43, 22, 33, 11, 3, 4, 53, 221}");
 
             var specification = new ServiceReference2.RandomSpecification { IntNumbersArray = inputArray };
@@ -48,12 +61,19 @@ namespace WcfServiceClient
             Console.WriteLine("SPAM");
             Console.WriteLine("SPAM");
             Console.Read();
+            
         }
         
     }
 
     public class CallbackHandler : ICallbackCalculatorCallback
     {
+        public void ReturnDateDiff(double days)
+        {
+            Console.WriteLine("DateDiff result: " + days);
+            Console.ReadLine();
+        }
+
         public void ReturnRandom(ServiceReference2.RandomResult result)
         {
             Console.WriteLine("Callback Result: " + result.Result);

@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.Runtime.Serialization;
 using System.ServiceModel;
 
 namespace CallbackContract
@@ -6,6 +7,10 @@ namespace CallbackContract
     [ServiceContract(SessionMode = SessionMode.Required, CallbackContract = typeof(ICallbackHandler))]
     public interface ICallbackCalculator
     {
+        [OperationContract(IsOneWay = true)]
+        void DateDiff(DateTime date);
+
+
         [OperationContract(IsOneWay = true)]
         void AsyncRandom(RandomSpecification specification);
     }
@@ -15,6 +20,9 @@ namespace CallbackContract
     {
         [OperationContract(IsOneWay = true)]
         void ReturnRandom(RandomResult result);
+
+        [OperationContract(IsOneWay = true)]
+        void ReturnDateDiff(double days);
     }
 
     [DataContract]

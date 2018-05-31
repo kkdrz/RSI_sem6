@@ -8,3 +8,5 @@ C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceHost\obj\Debug\WcfServiceHost.e
 C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceHost\obj\Debug\WcfServiceHost.pdb
 C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceHost\bin\Debug\CallbackContract.dll
 C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceHost\bin\Debug\CallbackContract.pdb
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceHost\bin\Debug\StreamContract.dll
+C:\Projects\rsi\rsi_3_4\RSI_3_4_part_b\WcfServiceHost\bin\Debug\StreamContract.pdb

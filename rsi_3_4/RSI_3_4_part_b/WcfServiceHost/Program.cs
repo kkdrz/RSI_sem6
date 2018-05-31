@@ -13,8 +13,17 @@ namespace WcfServiceHost
             
             ServiceHost callbackServiceHost = new ServiceHost(typeof(CallbackCalculator));
             WSDualHttpBinding dualHttpBinding = new WSDualHttpBinding();
-
             var serviceHost = new ServiceHost(typeof(ComplexCalculator));
+
+            /*
+            Uri baseAddr = new Uri("http://localhost:9100/Stream");
+            BasicHttpBinding b = new BasicHttpBinding();
+            b.TransferMode = TransferMode.Streamed;
+            b.MaxBufferSize = 8192;
+            b.MaxReceivedMessageSize = 100000000;
+            ServiceEndpoint endpoint = serviceHost.AddServiceEndpoint(typeof(StreamContract.IStream), b, baseAddr);
+            */
+
             try
             {
                 //ServiceEndpoint callbackEndpoint = serviceHost.AddServiceEndpoint(typeof(ICallbackCalculator), dualHttpBinding, "CallbackCalculator");
