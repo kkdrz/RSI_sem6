@@ -7,6 +7,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Random;
 
 @CrossOrigin()
 @RestController()
@@ -55,5 +58,33 @@ public class FruitController {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/modification", method = RequestMethod.POST, produces = "application/json")
+    public List<Integer> modification(@RequestBody Wrapper wrapper) {
+        LinkedList<Integer> list = new LinkedList<>();
+        for (int i = 0; i < wrapper.getValue(); i++) {
+            list.add(new Random().nextInt(50));
+            dao.addFruit(
+                    new Fruit("Fruit " + i,
+                            new Random().nextDouble(),
+                            new Random().nextInt(50)));
+        }
+        return list;
+    }
+
+    private static class Wrapper {
+        int value;
+
+        public Wrapper() {
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public void setValue(int value) {
+            this.value = value;
+        }
     }
 }
